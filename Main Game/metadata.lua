@@ -1,0 +1,7 @@
+-- title:   Solo Tank (Tentative)
+-- author:  Lenny Young
+-- desc:    N/A
+-- site:    N/A
+-- license: MIT License
+-- version: 0.1
+-- script:  lua

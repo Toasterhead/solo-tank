@@ -55,16 +55,37 @@ function draw_model()
 end
 
 function BOOT()
-	nodes[1]=Node:new(-30,-30,-30,{})
-	nodes[2]=Node:new(-30,30,-30,{nodes[1]})
-	nodes[3]=Node:new(30,30,-30,{nodes[2]})
-	nodes[4]=Node:new(30,-30,-30,{nodes[3]})
-	nodes[5]=Node:new(-30,-30,-30,{nodes[4]})
-	nodes[6]=Node:new(-30,30,30,{nodes[2]})
-	nodes[7]=Node:new(30,30,30,{nodes[3],nodes[6]})
-	nodes[8]=Node:new(30,-30,30,{nodes[4],nodes[7]})
-	nodes[9]=Node:new(-30,-30,30,{nodes[5],nodes[6],nodes[8]})
-
+	--Box
+	--nodes[1]=Node:new(-30,-30,-30,{})
+	--nodes[2]=Node:new(-30,30,-30,{nodes[1]})
+	--nodes[3]=Node:new(30,30,-30,{nodes[2]})
+	--nodes[4]=Node:new(30,-30,-30,{nodes[3]})
+	--nodes[5]=Node:new(-30,-30,-30,{nodes[4]})
+	--nodes[6]=Node:new(-30,30,30,{nodes[2]})
+	--nodes[7]=Node:new(30,30,30,{nodes[3],nodes[6]})
+	--nodes[8]=Node:new(30,-30,30,{nodes[4],nodes[7]})
+	--nodes[9]=Node:new(-30,-30,30,{nodes[5],nodes[6],nodes[8]})
+	
+	--Arrow
+	nodes[1]=Node:new(-30,0,10,{})
+	nodes[2]=Node:new(-10,-20,10,{nodes[1]})
+	nodes[3]=Node:new(-10,-10,10,{nodes[2]})
+	nodes[4]=Node:new(30,-10,10,{nodes[3]})
+	nodes[5]=Node:new(30,10,10,{nodes[4]})
+	nodes[6]=Node:new(-10,10,10,{nodes[5]})
+	nodes[7]=Node:new(-10,20,10,{nodes[6],nodes[1]})
+	nodes[8]=Node:new(-30,0,-10,{nodes[1]})
+	nodes[9]=Node:new(-10,-20,-10,{nodes[8],nodes[2]})
+	nodes[10]=Node:new(-10,-10,-10,{nodes[9],nodes[3]})
+	nodes[11]=Node:new(30,-10,-10,{nodes[10],nodes[4]})
+	nodes[12]=Node:new(30,10,-10,{nodes[11],nodes[5]})
+	nodes[13]=Node:new(-10,10,-10,{nodes[12],nodes[6]})
+	nodes[14]=Node:new(-10,20,-10,{nodes[13],nodes[7],nodes[8]})
+	for i=1,#nodes do
+		nodes[i].X=nodes[i].X*2
+		nodes[i].Y=nodes[i].Y*2
+		nodes[i].Z=nodes[i].Z*2
+	end
 end
 
 function TIC()
